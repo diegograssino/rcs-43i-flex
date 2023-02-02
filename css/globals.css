@@ -1,0 +1,56 @@
+.d-block {
+	display: block;
+	border: 1px solid black;
+	margin: 16px;
+	padding: 16px;
+}
+
+.d-inline {
+	display: inline;
+}
+
+.d-inline-block {
+	display: inline-block;
+	border: 1px solid black;
+	margin: 16px;
+	padding: 16px;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.card-list {
+	flex-direction: row;
+	flex-wrap: wrap;
+	background-color: lightgray;
+	justify-content: center;
+	align-items: center;
+	/* height: 1000px; */
+}
+
+.card {
+	width: 150px;
+	height: 150px;
+	border: 16px solid red;
+	margin: 16px;
+	font-size: 32px;
+	justify-content: center;
+	align-items: center;
+	background-image: url("http:");
+}
+
+.navbar {
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 0;
+	background-color: lightcoral;
+}
+
+.nav-btn {
+	list-style: none;
+}
+
+.nav-option {
+	margin: 10px;
+}
