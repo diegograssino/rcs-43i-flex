@@ -1,3 +1,49 @@
+/* font-family: 'Kufam';
+font-family: 'Noto-Sans-JP'; */
+
+body {
+	font-family: 'Noto-Sans-JP';
+	background-color: #F38181;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+nav,
+header,
+main,
+footer {
+	/* Medidas relativas a nivel pantalla: viewports o % */
+	padding: 0% 7%;
+}
+
+nav {
+	height: 7vh;
+}
+
+header {
+	height: 80vh;
+	background-color: #FCE38A;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: 'Kufam';
+}
+
+h1 {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+footer {
+	margin-top: auto;
+	background-color: #FCE38A;
+	height: 12vh;
+}
+
 .d-block {
 	display: block;
 	border: 1px solid black;
@@ -12,39 +58,47 @@
 .d-inline-block {
 	display: inline-block;
 	border: 1px solid black;
-	margin: 16px;
-	padding: 16px;
+	margin: 1rem;
+	padding: 1rem;
 }
 
 .d-flex {
 	display: flex;
 }
 
+.flex-center {
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+
 .card-list {
 	flex-direction: row;
 	flex-wrap: wrap;
-	background-color: lightgray;
 	justify-content: center;
 	align-items: center;
 	/* height: 1000px; */
 }
 
 .card {
-	width: 150px;
-	height: 150px;
-	border: 16px solid red;
-	margin: 16px;
-	font-size: 32px;
+	border-radius: 1rem;
+	width: 10rem;
+	height: 10rem;
+	margin: 1rem;
+	font-size: 2rem;
 	justify-content: center;
 	align-items: center;
 	background-image: url("http:");
+	background-color: #EAFFD0;
 }
 
 .navbar {
 	justify-content: space-between;
 	align-items: center;
-	margin-top: 0;
-	background-color: lightcoral;
+	background-color: #95E1D3;
 }
 
 .nav-btn {
@@ -52,5 +106,10 @@
 }
 
 .nav-option {
-	margin: 10px;
+	margin: .625rem;
+}
+
+.logo {
+	font-size: 1.5rem;
+	color: white;
 }
