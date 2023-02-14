@@ -1,9 +1,17 @@
 /* font-family: 'Kufam';
 font-family: 'Noto-Sans-JP'; */
 
+/* Definición de variables */
+:root {
+	--primary: #362FD9;
+	--secondary: #3C84AB;
+	--third: #85CDFD;
+	--fourth: #DEFCF9;
+}
+
 body {
 	font-family: 'Noto-Sans-JP';
-	background-color: #F38181;
+	background-color: var(--primary);
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
@@ -21,16 +29,13 @@ nav {
 	height: 7vh;
 }
 
-header {
-	height: 80vh;
-	background-color: #FCE38A;
-}
 
 h1,
 h2,
 h3,
 h4 {
 	font-family: 'Kufam';
+	color: white;
 }
 
 h1 {
@@ -40,7 +45,7 @@ h1 {
 
 footer {
 	margin-top: auto;
-	background-color: #FCE38A;
+	background-color: var(--secondary);
 	height: 12vh;
 }
 
@@ -83,22 +88,32 @@ footer {
 	/* height: 1000px; */
 }
 
+.d-grid {
+	display: grid;
+}
+
+
 .card {
 	border-radius: 1rem;
-	width: 10rem;
-	height: 10rem;
+	/* width: 10rem; */
+	height: 15rem;
 	margin: 1rem;
 	font-size: 2rem;
 	justify-content: center;
 	align-items: center;
-	background-image: url("http:");
-	background-color: #EAFFD0;
+	background-color: var(--third);
+	border: 5px solid var(--third);
+	transition: all .2s;
+}
+
+.card:hover {
+	border: 5px solid var(--fourth);
 }
 
 .navbar {
 	justify-content: space-between;
 	align-items: center;
-	background-color: #95E1D3;
+	background-color: var(--secondary);
 }
 
 .nav-btn {
@@ -112,4 +127,81 @@ footer {
 .logo {
 	font-size: 1.5rem;
 	color: white;
+}
+
+.btn-navbar {
+	text-decoration: none;
+	color: var(--fourth);
+	padding: .5rem;
+	border-radius: .25rem;
+	border: 2px solid var(--fourth);
+	background-color: var(--third);
+	cursor: pointer;
+	transition: all .2s;
+}
+
+.btn-navbar:hover {
+	color: var(--third);
+	border: 2px solid var(--third);
+	background-color: var(--fourth);
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.btn-navbar:active {
+	color: var(--fourth);
+	border: 2px solid var(--fourth);
+	background-color: var(--third);
+}
+
+/* Desde 0 hasta el siguiente breakpoint se aplica lo que esta aca abajo */
+.grid-list-container {
+	grid-template-columns: auto;
+}
+
+header {
+	height: 80vh;
+	background-image: url('https://www.rxwallpaper.site/wp-content/uploads/superhero-hd-wallpaper-1024x576.jpg');
+	background-position: center;
+	background-size: cover;
+}
+
+.navbar-desktop {
+	display: none;
+}
+
+.navbar-mobile {
+	display: block;
+}
+
+/* Desde 576 hasta el siguiente breakpoint se aplica lo que esta aca abajo */
+@media (min-width: 576px) {
+	.grid-list-container {
+		grid-template-columns: auto auto;
+	}
+
+	header {
+		background-image: url('https://kpcc.org.uk/wp-content/uploads/2014/07/hero.jpg');
+
+	}
+}
+
+/* Desde 768 hasta el siguiente breakpoint (y si no existe, de ahi en adelante) se aplica lo que esta aca abajo */
+@media (min-width: 768px) {
+	.grid-list-container {
+		grid-template-columns: auto auto auto;
+	}
+
+	header {
+		background-image: url('https://clipground.com/images/heroes-png-7.png');
+
+	}
+
+	.navbar-desktop {
+		display: block;
+	}
+
+	.navbar-mobile {
+		display: none;
+	}
 }
