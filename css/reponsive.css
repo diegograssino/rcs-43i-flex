@@ -1,0 +1,77 @@
+@import url('./reset.css');
+@import url("./globals.css");
+
+body {
+	background-color: #FFF;
+	margin-top: 2rem;
+}
+
+section {
+	display: grid;
+	grid-template-columns: auto;
+	gap: 1rem;
+}
+
+article {
+	width: 200px;
+	height: 200px;
+	border: 2px solid #000;
+}
+
+p {
+	font-size: 2rem;
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.solo-pantallas-chicas {
+	display: block;
+}
+
+.solo-pantallas-grandes {
+	display: none;
+}
+
+/* Todo lo que hice hasta ahora fue para movil, para medidas pequeñas */
+
+@media (min-width: 768px) {
+	section {
+		grid-template-columns: auto auto;
+	}
+
+	p {
+		font-size: 3rem;
+	}
+}
+
+@media (min-width: 992px) {
+	section {
+		grid-template-columns: auto auto auto;
+	}
+
+	p {
+		font-size: 4rem;
+	}
+
+	.solo-pantallas-chicas {
+		display: none;
+	}
+
+	.solo-pantallas-grandes {
+		display: block;
+	}
+}
+
+@media (min-width: 1200px) {
+	section {
+		grid-template-columns: auto auto auto auto;
+	}
+
+	p {
+		font-size: 5rem;
+	}
+}
